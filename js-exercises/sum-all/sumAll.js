@@ -1,11 +1,11 @@
 function sumAll(arr) {
-  const numbers = arr.sort((a, b) => a - b);
-  let i = numbers[0];
-  const max = numbers[1];
+  const numbersList = arr.sort((a, b) => a - b);
+  let currentNumber = numbersList[0];
+  const maxNumber = numbersList[1];
   let sum = 0;
-  while (i <= max) {
-    sum += i;
-    i += 1;
+  while (currentNumber <= maxNumber) {
+    sum += currentNumber;
+    currentNumber += 1;
   }
   return sum;
 }

@@ -1,12 +1,11 @@
 
-function duplicateLetters(...args) {
-  const word = args[0];
-  const wordCount = {};
-  for (const key of word) {
-    wordCount[key] = wordCount[key] ? wordCount[key] + 1 : 1;
+function duplicateLetters(word) {
+  const wordCountMap = {};
+  for (const letter of word) {
+    wordCountMap[letter] = wordCountMap[letter] ? wordCountMap[letter] + 1 : 1;
   }
-  const arr = Object.values(wordCount);
-  return Math.max(...arr) === 1 ? false : Math.max(...arr);
+  const wordCountArray = Object.values(wordCountMap);
+  return Math.max(...wordCountArray) === 1 ? false : Math.max(...wordCountArray);
 }
 export {
   duplicateLetters,
