@@ -1,8 +1,5 @@
-function isTriangle(a, b, c) {
-  if (a + b <= c || a + c <= b || b + c <= a) {
-    return false;
-  }
-  return true;
+function isTriangle(sideA, sideB, sideC) {
+  return !(sideA + sideB <= sideC || sideA + sideC <= sideB || sideB + sideC <= sideA);
 }
 export {
   isTriangle,
