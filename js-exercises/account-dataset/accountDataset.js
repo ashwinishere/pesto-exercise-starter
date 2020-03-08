@@ -18,14 +18,14 @@ function datasetWithRoundedDollar() {
 function sumOfBankBalances() {
   const sumOfBalances = bankBalances.map(account => +account.amount)
     .reduce((previousAmount, currentAmount) => previousAmount + currentAmount, 0);
-  return sumOfBalances.toFixed(2);
+  return +sumOfBalances.toFixed(2);
 }
 
 function sumOfInterests() {
   const sumOfInterest = bankBalances.filter(account => (account.state === 'WI' || account.state === 'IL' || account.state === 'WY' || account.state === 'OH' || account.state === 'GA' || account.state === 'DE'))
     .map(account => Math.round(parseFloat(account.amount) * 18.9) / 100)
     .reduce((previousAmount, currentAmount) => previousAmount + currentAmount, 0);
-  return sumOfInterest.toFixed(2);
+  return +sumOfInterest.toFixed(2);
 }
 
 function higherStateSums() {
