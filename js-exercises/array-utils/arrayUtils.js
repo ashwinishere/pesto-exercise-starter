@@ -10,12 +10,23 @@ function map(array, callback) {
   }
   return resultArray;
 }
-function filter() {
-
+function filter(array, callback) {
+  const resultArray = [];
+  for (let i = 0; i < array.length; i + 1) {
+    const result = callback(array[i], i, array);
+    if (result) {
+      resultArray.push(callback(array[i], i, array));
+    }
+  }
+  return resultArray;
 }
 
-function reduce() {
-
+function reduce(array, callback, initialValue) {
+  let accumulator = (initialValue || 0);
+  for (let i = 0; i < array.length; i + 1) {
+    accumulator = callback(array[i], i, array);
+  }
+  return accumulator;
 }
 export {
   forEach,
