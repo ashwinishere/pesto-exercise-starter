@@ -14,7 +14,7 @@ flipped('a', 'b', 'c', 'd');
 # Requirements
 
 ### **What are some good real-life use cases for such a function?**
-
+reversing a function without mutating values.
 
 ### **What test cases can you add to the test file?**
 
