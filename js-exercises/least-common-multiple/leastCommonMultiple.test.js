@@ -13,12 +13,12 @@ describe('leastCommonMultiple', () => {
     expect(leastCommonMultiple(6, 6)).toStrictEqual(6);
   });
   test('is throwing type error ', () => {
-    expect(leastCommonMultiple(6, 'hi')).toThrow(TypeError);
-    expect(leastCommonMultiple(false, 12)).toThrow(TypeError);
+    expect(() => leastCommonMultiple(6, 'hi')).toThrow();
+    expect(() => leastCommonMultiple(false, 12)).toThrow();
   });
   test('is throwing negative error ', () => {
-    expect(leastCommonMultiple(-6, 21)).toThrow(Error);
-    expect(leastCommonMultiple(6, -21)).toThrow(Error);
-    expect(leastCommonMultiple(-6, -21)).toThrow(Error);
+    expect(() => leastCommonMultiple(-6, 21)).toThrow();
+    expect(() => leastCommonMultiple(6, -21)).toThrow();
+    expect(() => leastCommonMultiple(-6, -21)).toThrow();
   });
 });
