@@ -45,4 +45,15 @@ describe('parseMs', () => {
       nanoseconds: 0,
     });
   });
+  test('is parsing milliseconds to object for negative', () => {
+    expect(parseMs(-1337000001)).toEqual({
+      days: -15,
+      hours: -11,
+      minutes: -23,
+      seconds: -20,
+      milliseconds: -1,
+      microseconds: 0,
+      nanoseconds: 0,
+    });
+  });
 });
