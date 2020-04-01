@@ -3,7 +3,7 @@
 In this exercises, you'll will make a reactive grocery list.
 
 ## How to do the question
-- Run `npm install` in the `grocery-list-react` folder.
+- Run ` ` in the `grocery-list-react` folder.
 - Run `npm run start` to start the development server.
 
 ## Requirements
