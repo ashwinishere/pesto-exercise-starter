@@ -1,0 +1,12 @@
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.margin-left {
+  margin-left: 35%;
+}
+.game-canvas {
+  border: 5px solid gray;
+}
