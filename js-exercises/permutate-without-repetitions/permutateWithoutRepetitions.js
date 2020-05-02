@@ -5,7 +5,7 @@
 function permutateWithoutRepetitions(permutationOptions, level) {
   const result = [];
   if (permutationOptions.length === 1) {
-    return [...permutationOptions];
+    return [permutationOptions];
   }
   const firstPermutationOption = permutationOptions[0];
   const smallerPermutations = permutateWithoutRepetitions(permutationOptions.slice(1), level);
